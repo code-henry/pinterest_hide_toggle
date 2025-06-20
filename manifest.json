@@ -1,0 +1,21 @@
+{
+  "manifest_version": 1,
+  "name": "Pinterest Related Images Hide Toggle",
+  "version": "1.0",
+  "description": "Hide related pins on Pinterest, keep only the main pin visible; sync across tabs(probably).",
+  "icons": {
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://jp.pinterest.com/*",
+        "https://pinterest.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
